@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+        <a-sphere
+            position="0 1 -5"
+            depth="2"
+            height="2"
+            width="2"
+            animation="
+                property: rotation;
+                from: 0 0 0;
+                to: 0 360 0;
+                dur: 2000;
+                easing: linear;
+                loop: true;
+            "
+            animation__2="
+            property: color;
+            from: #ff0000;
+            to: #0000ff;
+            dur: 500;
+            loop: true"
+            color="red">
+        </a-sphere>
+        <a-torus color="#0000ff" arc="360" radius="2.5" radius-tubular="0.1" position="0 1 -5"
+        animation="
+        property: rotation;
+        from: 0 0 0;
+        to: 1080 1080 1080;
+        dur: 2000;
+        loop: true;
+        easing: linear;"></a-torus>
+        
+        <a-torus color="#ff0000" arc="360" radius="2.5" radius-tubular="0.1" position="0 -1 5"
+        animation="
+        property: rotation;
+        from: 1080 1080 1080;
+        to: 0 0 0;
+        dur: 2000;
+        loop: true;
+        easing: linear;"></a-torus>
+        </a-scene>
+    </body>
+</html>
